@@ -46,11 +46,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    &nbsp;
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Category:</label>
+                            <div class="col-lg-10 col-md-6 col-sm-12">
+                                <select name="category_id" id="category_id" required>
+                                    <option value="">Select a category</option>
+                                    @foreach($viewData["category"] as $category)
+                                    <option value="{{ $category->getId() }}">{{ $category->getName() }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        &nbsp;
+                    </div>
                 </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>
@@ -65,6 +79,8 @@
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">img</th>
                     <th scope="col">Delete</th>
                     <th scope="col">edit</th>
                 </tr>
@@ -75,6 +91,8 @@
                     <td>{{ $product->getId() }}</td>
                     <td>{{ $product->getName() }}</td>
                     <td>{{ $product->getDescription() }}</td>
+                    <td>{{ $product->getNameCategory() }}</td>
+                    <td><img class="img-fluid w-25 " src="/storage/{{ $product->getImage() }}"></td>
                     <td>
                         <form action="{{ route('admin.product.delete', $product) }} " method="POST">
                             @csrf
