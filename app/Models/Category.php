@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-<<<<<<< HEAD
     // use HasFactory;
     protected $fillable = ['name', 'description'];
 
@@ -59,7 +58,5 @@ class Category extends Model
     {
         $this->attributes['updated_at'] = $updatedAt;
     }
-=======
-    use HasFactory;
->>>>>>> 6c106f6d7bc73b163005cafb3b6cc7299d3ec430
+
 }
