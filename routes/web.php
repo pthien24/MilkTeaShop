@@ -33,3 +33,5 @@ Route::post('/admin/category/store', [AdminCategoryController::class , 'store'])
 Route::delete('/admin/category/delete/{id}', [AdminCategoryController::class , 'delete'])
 ->name("admin.category.delete");
 Route::get('/admin/category/{id}/edit', [AdminCategoryController::class , 'edit'])->name("admin.category.edit");
+
+Route::put('/admin/category/{id}/update', [AdminCategoryController::class , 'update'])->name("admin.category.update");
