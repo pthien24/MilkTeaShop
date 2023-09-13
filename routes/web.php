@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
+<<<<<<< HEAD
 use App\Http\Controllers\Admin\AdminCategoryController;
+=======
+>>>>>>> 6c106f6d7bc73b163005cafb3b6cc7299d3ec430
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +25,7 @@ Route::get('/contact', [HomeController::class , 'contact'])->name("home.contact"
 
 
 Route::get('/admin', [AdminHomeController::class , 'index'])->name("admin.home.index");
+<<<<<<< HEAD
 Route::get('/admin/product', [AdminHomeController::class , 'index'])->name("admin.product.index");
 
 
@@ -34,3 +38,5 @@ Route::post('/admin/category/store', [AdminCategoryController::class , 'store'])
 Route::delete('/admin/category/delete/{id}', [AdminCategoryController::class , 'delete'])
 ->name("admin.category.delete");
 Route::get('/admin/category/{id}/edit', [AdminCategoryController::class , 'edit'])->name("admin.category.edit");
+=======
+>>>>>>> 6c106f6d7bc73b163005cafb3b6cc7299d3ec430
