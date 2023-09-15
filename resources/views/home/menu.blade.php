@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('title', $viewdata['title'])
-@section('subtitle', $viewdata['subtitle'])
+@section('title', $viewData['title'])
+@section('subtitle', $viewData['subtitle'])
 @section('content')
 <div class="heading">
-    <h3>{{$viewdata['title']}}</h3>
-    <p><a href="{{route('home.index')}}">home </a> <span> / {{$viewdata['subtitle']}}</span></p>
+    <h3>{{$viewData['title']}}</h3>
+    <p><a href="{{route('home.index')}}">home </a> <span> / {{$viewData['subtitle']}}</span></p>
  </div>
 
 
@@ -13,20 +13,20 @@
     <h1 class="title">latest dishes</h1>
  
     <div class="box-container">
- 
+      @foreach ($viewData["products"] as $product)
        <form accept="" method="post" class="box">
           <a href="quick_view.html" class="fas fa-eye"></a>
           <button class="fas fa-shopping-cart" type="submit" name="add_to_cart"></button>
-          <img src="uploaded_img/pizza-1.png" alt="">
-          <a href="category.html" class="cat">fast food</a>
-          <div class="name">delicious pizza 01</div>
+          <img src="/storage/{{ $product->getImage() }}"alt="">
+          <a href="category.html" class="cat">{{ $product->getNameCategory()}}></a>
+          <div class="name">{{ $product->getName()}}</div>
           <div class="flex">
-             <div class="price"><span>$</span>3<span>/-</span></div>
+             <div class="price"><span>$</span>{{ $product->getPrice()}}<span>/-</span></div>
              <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
           </div>
        </form>
- 
-       <form accept="" method="post" class="box">
+      @endforeach
+       {{-- <form accept="" method="post" class="box">
           <a href="quick_view.html" class="fas fa-eye"></a>
           <button class="fas fa-shopping-cart" type="submit" name="add_to_cart"></button>
           <img src="uploaded_img/dish-1.png" alt="">
@@ -121,7 +121,7 @@
              <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
           </div>
        </form>
- 
+  --}}
     </div>
  
  </section>

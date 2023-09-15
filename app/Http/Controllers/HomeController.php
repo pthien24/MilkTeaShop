@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class HomeController extends Controller
 {
     //
@@ -26,14 +28,18 @@ class HomeController extends Controller
         return view('home.contact')->with("viewdata", $viewdata);
     }
 
-    public function menu(){
-        $viewdata = [];
-        $viewdata['title'] = "our Menu";
-        $viewdata['subtitle'] = "menu";
-        return view('home.menu')->with("viewdata", $viewdata);
+    public function menu()
+    {
+        $viewData = [];
+        $viewData['title'] = "our Menu";
+        $viewData['subtitle'] = "menu";
+        $viewData["products"] = Product::all();
+
+        return view('home.menu')->with('viewData', $viewData);
     }
 
-    public function orders(){
+    public function orders()
+    {
         $viewdata = [];
         $viewdata['title'] = "Your Orders";
         $viewdata['subtitle'] = "orders";
