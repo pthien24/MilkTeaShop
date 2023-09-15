@@ -25,4 +25,18 @@ class HomeController extends Controller
         $viewdata['subtitle'] = "contact";
         return view('home.contact')->with("viewdata", $viewdata);
     }
+
+    public function menu(){
+        $viewdata = [];
+        $viewdata['title'] = "our Menu";
+        $viewdata['subtitle'] = "menu";
+        return view('home.menu')->with("viewdata", $viewdata);
+    }
+
+    public function orders(){
+        $viewdata = [];
+        $viewdata['title'] = "Your Orders";
+        $viewdata['subtitle'] = "orders";
+        return view('home.menu')->with("viewdata", $viewdata);
+    }
 }

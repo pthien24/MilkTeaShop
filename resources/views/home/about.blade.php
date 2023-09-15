@@ -4,7 +4,7 @@
 @section('content')
 <div class="heading">
    <h3>{{$viewdata['title']}}</h3>
-   <p><a href="home.html">home </a> <span> / {{$viewdata['subtitle']}}</span></p>
+   <p><a href="{{route('home.index')}}">home </a> <span> / {{$viewdata['subtitle']}}</span></p>
 </div>
 <section class="about">
    <div class="row">

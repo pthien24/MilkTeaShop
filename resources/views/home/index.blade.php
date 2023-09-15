@@ -9,7 +9,7 @@
             <div class="content">
                <span>order online</span>
                <h3>delicious pizza</h3>
-               <a href="menu.html" class="btn">see menus</a>
+               <a href="{{route('home.menu')}}" class="btn">see menus</a>
             </div>
             <div class="image">
                <img src="{{ asset("images/home-img-1.png")}}" alt="">
@@ -20,7 +20,7 @@
             <div class="content">
                <span>order online</span>
                <h3>double hamburger</h3>
-               <a href="menu.html" class="btn">see menus</a>
+               <a href="{{route('home.menu')}}" class="btn">see menus</a>
             </div>
             <div class="image">
                <img src="{{ asset("images/home-img-2.png")}}" alt="">
@@ -31,7 +31,7 @@
             <div class="content">
                <span>order online</span>
                <h3>roasted chicken</h3>
-               <a href="menu.html" class="btn">see menus</a>
+               <a href="{{route('home.menu')}}" class="btn">see menus</a>
             </div>
             <div class="image">
                <img src="{{ asset("images/home-img-3.png")}}" alt="">
