@@ -14,12 +14,12 @@
 <body>
     <header class="header">
         <section class="flex">
-            <a href="home.html" class="logo">yum-yum 😋</a>
+            <a href="{{route('home.index')}}" class="logo">yum-yum 😋</a>
             <nav class="navbar">
                 <a href="{{ route('home.index')}}">home</a>
                 <a href="{{ route('home.about')}}">about</a>
-                <a href="menu.html">menu</a>
-                <a href="orders.html">orders</a>
+                <a href="{{route('home.menu')}}">menu</a>
+                <a href="{{route('home.orders')}}">orders</a>
                 <a href="{{ route('home.contact')}}">contact</a>
             </nav>
             <div class="icons">
