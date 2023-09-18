@@ -2,65 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
+<<<<<<< HEAD
+use Illuminate\Http\Request;
+use App\Models\Category; // Import the Product model
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $viewData = [];
+        $viewData["title"] = "Products - Online Store";
+        $viewData["subtitle"] = "List of products";
+        $query = $request->get('q');
+        $viewData["search"] = $query;
+        $viewData["products"] = Category::query()
+            ->where('name', 'like', '%' . $query . '%')
+            ->paginate();
+        // $viewData["products"] = Product::paginate(8);
+        return view('product.index')->with("viewData", $viewData);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function show($id)
     {
-        //
-    }
+        $viewData = [];
+        $product = Category::findOrFail($id);
+        $viewData["title"] = $product->getName() . " - Online Store";
+        $viewData["subtitle"] = $product->getName() . " - Product information";
+        $viewData["product"] = $product;
+        return view('product.show')->with("viewData", $viewData);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreCategoryRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Category $category)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateCategoryRequest $request, Category $category)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Category $category)
-    {
-        //
     }
 }
