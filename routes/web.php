@@ -20,6 +20,8 @@ Route::get('/about', [HomeController::class , 'about'])->name("home.about");
 Route::get('/contact', [HomeController::class , 'contact'])->name("home.contact");
 Route::get('/menu', [HomeController::class , 'menu'])->name("home.menu");
 Route::get('/orders', [HomeController::class , 'orders'])->name("home.orders");
+Route::get('/login', [HomeController::class , 'login'])->name("home.login");
+Route::get('/register', [HomeController::class , 'register'])->name("home.register");
 
 Route::get('/admin', [AdminHomeController::class , 'index'])->name("admin.home.index");
 

@@ -39,4 +39,16 @@ class HomeController extends Controller
         $viewdata['subtitle'] = "orders";
         return view('home.menu')->with("viewdata", $viewdata);
     }
+
+    public function login(){
+        $viewdata = [];
+        $viewdata['title'] = "Home Page - food Store";
+        return view('home.login')->with("viewdata", $viewdata);
+    }
+
+    public function register(){
+        $viewdata = [];
+        $viewdata['title'] = "Home Page - food Store";
+        return view('home.register')->with("viewdata", $viewdata);
+    }
 }

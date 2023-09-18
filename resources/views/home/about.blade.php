@@ -13,8 +13,8 @@
       </div>
       <div class="content">
          <h3>why choose us?</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis non odit nihil, doloremque sunt aut placeat culpa. Adipisci minima, neque necessitatibus incidunt nemo eveniet mollitia quis facere vel consectetur culpa?</p>
-         <a href="menu.html" class="btn">our menu</a>
+         <p>Hello! Thank you for your interest in our store. Customer reviews are one of the important factors that help us improve the quality of our products and services.</p>
+         <a href="{{route('home.menu')}}" class="btn">our menu</a>
       </div>
    </div>
 </section>
@@ -26,19 +26,19 @@
       <div class="box">
          <img src="images/step-1.png" alt="">
          <h3>select food</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, hic.</p>
+         <p>Diversity in choosing drinks and snacks in menu.</p>
       </div>
 
       <div class="box">
          <img src="images/step-2.png" alt="">
          <h3>30 minutes delivery</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, hic.</p>
+         <p>Fast delivery, professional team and always maintain the best quality to customers.</p>
       </div>
 
       <div class="box">
          <img src="images/step-3.png" alt="">
          <h3>enjoy food!</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, hic.</p>
+         <p>If you need further assistance, please contact us anytime. Have a nice day!</p>
       </div>
 
    </div>
@@ -55,7 +55,7 @@
 
          <div class="swiper-slide slide">
             <img src="images/pic-1.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+            <p>Bubble tea is a Taiwanese iced tea that has a layer of chewy tapioca balls that sit on the bottom.</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -68,7 +68,7 @@
 
          <div class="swiper-slide slide">
             <img src="images/pic-2.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+            <p>Can't wait to enjoy your food again.</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -81,7 +81,7 @@
 
          <div class="swiper-slide slide">
             <img src="images/pic-3.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+            <p>The space is cool and clean, and the staff is friendly.</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -94,7 +94,7 @@
 
          <div class="swiper-slide slide">
             <img src="images/pic-4.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+            <p>The cakes at this shop are really delicious.</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -107,7 +107,7 @@
 
          <div class="swiper-slide slide">
             <img src="images/pic-5.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+            <p>The shop has a large parking lot and the security guard is enthusiastic to help customers.</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
@@ -120,7 +120,7 @@
 
          <div class="swiper-slide slide">
             <img src="images/pic-6.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo exercitationem ullam esse quia iusto in.</p>
+            <p>If the store has a promotion, how great it is.</p>
             <div class="stars">
                <i class="fas fa-star"></i>
                <i class="fas fa-star"></i>
