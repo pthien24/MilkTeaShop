@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 
 /*
@@ -36,7 +37,12 @@ Route::delete('/admin/category/delete/{id}', [AdminCategoryController::class , '
 Route::get('/admin/category/{id}/edit', [AdminCategoryController::class , 'edit'])->name("admin.category.edit");
 Route::put('/admin/category/{id}/update', [AdminCategoryController::class , 'update'])->name("admin.category.update");
 
-Route::get('/admin/product', [AdminHomeController::class , 'index'])->name("admin.product.index");
+
+
+
+Route::get('/admin/product', [AdminProductController::class , 'index'])->name("admin.product.index");
+
+
 Route::post('/admin/products/store', 'App\Http\Controllers\admin\AdminProductController@store')
 ->name("admin.product.store");
 Route::delete('/products/delete/{id}', 'App\Http\Controllers\admin\AdminProductController@delete')
