@@ -8,33 +8,33 @@
          <div class="swiper-slide slide">
             <div class="content">
                <span>order online</span>
-               <h3>delicious pizza</h3>
+               <h3>Milk tea</h3>
                <a href="{{route('home.menu')}}" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="{{ asset("images/home-img-1.png")}}" alt="">
+               <img src="{{ asset("images/bubbletea1.jpg")}}" alt="">
             </div>
          </div>
 
          <div class="swiper-slide slide">
             <div class="content">
                <span>order online</span>
-               <h3>double hamburger</h3>
+               <h3>double sandwich</h3>
                <a href="{{route('home.menu')}}" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="{{ asset("images/home-img-2.png")}}" alt="">
+               <img src="{{ asset("images/sandwich1.jpg")}}" alt="">
             </div>
          </div>
 
          <div class="swiper-slide slide">
             <div class="content">
                <span>order online</span>
-               <h3>roasted chicken</h3>
+               <h3>cake</h3>
                <a href="{{route('home.menu')}}" class="btn">see menus</a>
             </div>
             <div class="image">
-               <img src="{{ asset("images/home-img-3.png")}}" alt="">
+               <img src="{{ asset("images/cake1.jpg")}}" alt="">
             </div>
          </div>
 

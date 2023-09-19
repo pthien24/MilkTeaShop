@@ -29,12 +29,11 @@
                 <div id="menu-btn" class="fas fa-bars"></div>
             </div>
             <div class="profile">
-                <p class="name">shaikh anas</p>
                 <div class="flex">
                     <a href="profile.html" class="btn">profile</a>
                     <a href="#" class="delete-btn">logout</a>
                 </div>
-                <p class="account"><a href="login.html">login</a> or <a href="register.html">register</a></p>
+                <p class="account"><a href="{{route('home.login')}}">login</a> or <a href="{{route('home.register')}}">register</a></p>
             </div>
         </section>
     </header>
