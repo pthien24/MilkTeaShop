@@ -40,21 +40,29 @@ class HomeController extends Controller
 
     public function orders()
     {
-        $viewdata = [];
-        $viewdata['title'] = "Your Orders";
-        $viewdata['subtitle'] = "orders";
-        return view('home.menu')->with("viewdata", $viewdata);
+        $viewData = [];
+        $viewData['title'] = "Your Orders";
+        $viewData['subtitle'] = "orders";
+        return view('home.orders')->with("viewData", $viewData);
     }
+    // public function profile()
+    // {
+    //     $viewData = [];
+    //     $viewData['title'] = "My profile";
+    //     $viewData['subtitle'] = "profile";
+    //     return view('home.profile')->with("viewData", $viewData);
+    // }
+    // public function login()
+    // {
+    //     $viewData = [];
+    //     $viewData['title'] = "Home Page - food Store";
+    //     return view('home.login')->with("viewData", $viewData);
+    // }
 
-    public function login(){
-        $viewdata = [];
-        $viewdata['title'] = "Home Page - food Store";
-        return view('home.login')->with("viewdata", $viewdata);
-    }
-
-    public function register(){
-        $viewdata = [];
-        $viewdata['title'] = "Home Page - food Store";
-        return view('home.register')->with("viewdata", $viewdata);
-    }
+    // public function register()
+    // {
+    //     $viewData = [];
+    //     $viewData['title'] = "Home Page - food Store";
+    //     return view('home.register')->with("viewData", $viewData);
+    // }
 }

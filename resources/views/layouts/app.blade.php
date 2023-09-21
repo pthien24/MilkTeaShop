@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="{{asset ('css/style.css')}}">
@@ -18,22 +19,31 @@
             <nav class="navbar">
                 <a href="{{ route('home.index')}}">home</a>
                 <a href="{{ route('home.about')}}">about</a>
-                <a href="{{route('home.menu')}}">menu</a>
+                <a href="{{route('product.index')}}">menu</a>
                 <a href="{{route('home.orders')}}">orders</a>
                 <a href="{{ route('home.contact')}}">contact</a>
             </nav>
             <div class="icons">
                 <a href="search.html"><i class="fas fa-search"></i></a>
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+                @guest
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('register') }}">Register</a>
+                @else
                 <div id="user-btn" class="fas fa-user"></div>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+
+                @endguest
                 <div id="menu-btn" class="fas fa-bars"></div>
             </div>
             <div class="profile">
                 <div class="flex">
-                    <a href="profile.html" class="btn">profile</a>
-                    <a href="#" class="delete-btn">logout</a>
+                    <a href="{{route('user.index')}}" class="btn">profile</a>
+                    <form id="logout" action="{{ route('logout') }}" method="POST">
+                        <a role="button" class="delete-btn" onclick="document.getElementById('logout').submit();">Logout</a>
+                        @csrf
+                    </form>
                 </div>
-                <p class="account"><a href="{{route('home.login')}}">login</a> or <a href="{{route('home.register')}}">register</a></p>
+                <p class="account"><a href="{{route('login')}}">login</a> or <a href="{{route('register')}}">register</a></p>
             </div>
         </section>
     </header>

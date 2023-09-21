@@ -92,7 +92,7 @@
                     <td>{{ $product->getName() }}</td>
                     <td>{{ $product->getDescription() }}</td>
                     <td>{{ $product->getNameCategory() }}</td>
-                    <td><img class="img-fluid w-25 " src="/storage/{{ $product->getImage() }}"></td>
+                    <td><img class="img-fluid w-25 " src="{{ asset('/storage/'.$product->getImage()) }}"></td>
                     <td>
                         <form action="{{ route('admin.product.delete', $product) }} " method="POST">
                             @csrf

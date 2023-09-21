@@ -14,7 +14,7 @@
       <div class="content">
          <h3>why choose us?</h3>
          <p>Hello! Thank you for your interest in our store. Customer reviews are one of the important factors that help us improve the quality of our products and services.</p>
-         <a href="{{route('home.menu')}}" class="btn">our menu</a>
+         <a href="{{route('product.index')}}" class="btn">our menu</a>
       </div>
    </div>
 </section>

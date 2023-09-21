@@ -31,7 +31,7 @@ class AdminProductController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = uniqid() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')-> put($imageName, file_get_contents($request->file('image')->getRealPath()));
+            Storage::disk('public')->put($imageName, file_get_contents($request->file('image')->getRealPath()));
             $creationData['image'] = $imageName;
         }
         Product::create($creationData);

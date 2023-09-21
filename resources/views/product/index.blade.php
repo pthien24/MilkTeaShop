@@ -15,7 +15,7 @@
     <div class="box-container">
       @foreach ($viewData["products"] as $product)
        <form accept="" method="post" class="box">
-          <a href="quick_view.html" class="fas fa-eye"></a>
+          <a href="{{route("product.show",$product->getId())}}" class="fas fa-eye"></a>
           <button class="fas fa-shopping-cart" type="submit" name="add_to_cart"></button>
           <img src="/storage/{{ $product->getImage() }}"alt="">
           <a href="category.html" class="cat">{{ $product->getNameCategory()}}></a>

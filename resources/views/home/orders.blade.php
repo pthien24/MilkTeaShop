@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('title', $viewdata['title'])
-@section('subtitle', $viewdata['subtitle'])
+@section('title', $viewData['title'])
+@section('subtitle', $viewData['subtitle'])
 @section('content')
 <div class="heading">
-   <h3>{{$viewdata['title']}}</h3>
-   <p><a href="{{route('home.index')}}">home </a> <span> / {{$viewdata['subtitle']}}</span></p>
+   <h3>{{$viewData['title']}}</h3>
+   <p><a href="{{route('home.index')}}">home </a> <span> / {{$viewData['subtitle']}}</span></p>
 </div>
 
 <section class="orders">

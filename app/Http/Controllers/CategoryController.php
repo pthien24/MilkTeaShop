@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use Illuminate\Http\Request;
 use App\Models\Category; // Import the Product model
 
