@@ -24,7 +24,6 @@
                 <a href="{{ route('home.contact')}}">contact</a>
             </nav>
             <div class="icons">
-                <a href="search.html"><i class="fas fa-search"></i></a>
                 @guest
                 <a href="{{ route('login') }}">Login</a>
                 <a href="{{ route('register') }}">Register</a>
@@ -53,13 +52,12 @@
             <div class="box">
                 <img src="images/email-icon.png" alt="">
                 <h3>our email</h3>
-                <a href="mailto:shaikhanas@gmail.com">shaikhanas@gmail.com</a>
-                <a href="mailto:anasbhai@gmail.com">anasbhai@gmail.com</a>
+                <a href="mailto:AdminShop@gmail.com">AdminShop@gmail.com</a>
             </div>
             <div class="box">
                 <img src="images/clock-icon.png" alt="">
                 <h3>opening hours</h3>
-                <p>00:07am to 00:10pm </p>
+                <p>14:00pm to 22:00pm </p>
             </div>
             <div class="box">
                 <img src="images/map-icon.png" alt="">
@@ -73,7 +71,7 @@
                 <a href="tel:1112223333">+111-222-3333</a>
             </div>
         </section>
-        <div class="credit">&copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!</div>
+        <div class="credit">&copy; copyright 2023 | all rights reserved!</div>
     </footer>
     <script src="js/script.js"></script>
 </body>
