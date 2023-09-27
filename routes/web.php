@@ -43,40 +43,43 @@ Route::middleware('auth')->group(function () {
     Route::get('/myorders/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myorders.orders");
 });
 
-// admin
-// admin category
-Route::get('/admin', [AdminHomeController::class , 'index'])->name("admin.home.index");
-Route::get('/admin/category', [AdminCategoryController::class , 'index'])->name("admin.category.index");
-Route::post('/admin/category/store', [AdminCategoryController::class , 'store'])->name("admin.category.store");
-Route::delete('/admin/category/delete/{id}', [AdminCategoryController::class , 'delete'])
-->name("admin.category.delete");
-Route::get('/admin/category/{id}/edit', [AdminCategoryController::class , 'edit'])->name("admin.category.edit");
-Route::put('/admin/category/{id}/update', [AdminCategoryController::class , 'update'])->name("admin.category.update");
+
+Route::middleware('admin')->group(function () {
+    // admin
+    // admin category
+    Route::get('/admin', [AdminHomeController::class , 'index'])->name("admin.home.index");
+    Route::get('/admin/category', [AdminCategoryController::class , 'index'])->name("admin.category.index");
+    Route::post('/admin/category/store', [AdminCategoryController::class , 'store'])->name("admin.category.store");
+    Route::delete('/admin/category/delete/{id}', [AdminCategoryController::class , 'delete'])
+    ->name("admin.category.delete");
+    Route::get('/admin/category/{id}/edit', [AdminCategoryController::class , 'edit'])->name("admin.category.edit");
+    Route::put('/admin/category/{id}/update', [AdminCategoryController::class , 'update'])
+    ->name("admin.category.update");
 
 
 
-// admin product
+    // admin product
 
-Route::get('/admin/product', [AdminProductController::class , 'index'])->name("admin.product.index");
-Route::post('/admin/products/store', 'App\Http\Controllers\admin\AdminProductController@store')
-->name("admin.product.store");
-Route::delete('/products/delete/{id}', 'App\Http\Controllers\admin\AdminProductController@delete')
-->name("admin.product.delete");
-Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\admin\AdminProductController@edit')
-->name("admin.product.edit");
-Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')
-->name("admin.product.update");
-
-
-Route::get('/admin/order', [AdminOrderController::class , 'index'])->name("admin.order.index");
-Route::put('/admin/order/{id}/editStatus', [AdminOrderController::class , 'editStatus'])
-->name("admin.order.editStatus");
+    Route::get('/admin/product', [AdminProductController::class , 'index'])->name("admin.product.index");
+    Route::post('/admin/products/store', 'App\Http\Controllers\admin\AdminProductController@store')
+    ->name("admin.product.store");
+    Route::delete('/products/delete/{id}', 'App\Http\Controllers\admin\AdminProductController@delete')
+    ->name("admin.product.delete");
+    Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\admin\AdminProductController@edit')
+    ->name("admin.product.edit");
+    Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')
+    ->name("admin.product.update");
 
 
-Route::get('/admin/user', [AdminUserController::class , 'index'])->name("admin.user.index");
-Route::delete('/admin/user/delete/{id}', [AdminUserController::class , 'delete'])->name("admin.user.delete");
-Route::put('/admin/user/{id}/editRole', [AdminUserController::class , 'editRole'])
-->name("admin.order.editRole");
-// end admin
+    Route::get('/admin/order', [AdminOrderController::class , 'index'])->name("admin.order.index");
+    Route::put('/admin/order/{id}/editStatus', [AdminOrderController::class , 'editStatus'])
+    ->name("admin.order.editStatus");
 
+
+    Route::get('/admin/user', [AdminUserController::class , 'index'])->name("admin.user.index");
+    Route::delete('/admin/user/delete/{id}', [AdminUserController::class , 'delete'])->name("admin.user.delete");
+    Route::put('/admin/user/{id}/editRole', [AdminUserController::class , 'editRole'])
+    ->name("admin.order.editRole");
+    // end admin
+});
 Auth::routes();
