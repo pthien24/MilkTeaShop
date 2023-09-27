@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link href="{{ asset('/css/admin.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.20.0/font/bootstrap-icons.css" rel="stylesheet">
+
     <title>@yield('title', 'Admin - Online Store')</title>
 </head>
 
@@ -22,6 +23,8 @@
                 <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- Admin - Home</a></li>
                 <li><a href="{{ route('admin.product.index') }}" class="nav-link text-white">- Admin - Products</a></li>
                 <li><a href="{{ route('admin.category.index') }}" class="nav-link text-white">- Admin - category</a></li>
+                <li><a href="{{ route('admin.order.index') }}" class="nav-link text-white">- Admin - order</a></li>
+                <li><a href="{{ route('admin.user.index') }}" class="nav-link text-white">- Admin - user</a></li>
                 <li>
                     <a href="{{ route('home.index') }}" class="mt-2 btn bg-primary text-white">Go back to the home page</a>
                 </li>

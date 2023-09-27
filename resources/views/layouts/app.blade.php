@@ -20,7 +20,10 @@
                 <a href="{{ route('home.index')}}">home</a>
                 <a href="{{ route('home.about')}}">about</a>
                 <a href="{{route('product.index')}}">menu</a>
-                <a href="{{route('home.orders')}}">orders</a>
+                @guest
+                @else
+                <a href="{{route('myorders.orders')}}">orders</a>
+                @endguest
                 <a href="{{ route('home.contact')}}">contact</a>
             </nav>
             <div class="icons">
@@ -30,8 +33,11 @@
                 <a href="{{ route('register') }}">Register</a>
                 @else
                 <div id="user-btn" class="fas fa-user"></div>
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
-
+                <a href="{{ route('cart.index') }}"><i class="fas fa-shopping-cart"></i><span>(@if(session('products'))
+        <span>{{ count(session('products')) }}</span>
+    @else
+        <span>0</span>
+    @endif)</span></a>
                 @endguest
                 <div id="menu-btn" class="fas fa-bars"></div>
             </div>

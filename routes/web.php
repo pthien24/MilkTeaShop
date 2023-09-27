@@ -7,6 +7,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminCategoryController;
+use App\Http\Controllers\Admin\AdminOrderController;
+use App\Http\Controllers\Admin\AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,16 @@ Route::get('/profile', [UserController::class , 'index'])->name("user.index");
 // product route
 Route::get('/menu', [ProductController::class , 'index'])->name("product.index");
 Route::get('/show/{id}', [ProductController::class , 'show'])->name("product.show");
+
+Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
+Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("cart.add");
+Route::get('/cart/delete/{id}', 'App\Http\Controllers\CartController@delete')->name("cart.delete");
+Route::patch('/cart/update/{id}', 'App\Http\Controllers\CartController@update')->name("cart.update");
+Route::middleware('auth')->group(function () {
+    Route::post('/cart/purchase', 'App\Http\Controllers\CartController@purchase')->name("cart.purchase");
+    Route::get('/cart/checkout', 'App\Http\Controllers\CartController@checkout')->name("cart.checkout");
+    Route::get('/myorders/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myorders.orders");
+});
 
 // admin
 // admin category
@@ -56,7 +68,15 @@ Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProdu
 ->name("admin.product.update");
 
 
+Route::get('/admin/order', [AdminOrderController::class , 'index'])->name("admin.order.index");
+Route::put('/admin/order/{id}/editStatus', [AdminOrderController::class , 'editStatus'])
+->name("admin.order.editStatus");
 
+
+Route::get('/admin/user', [AdminUserController::class , 'index'])->name("admin.user.index");
+Route::delete('/admin/user/delete/{id}', [AdminUserController::class , 'delete'])->name("admin.user.delete");
+Route::put('/admin/user/{id}/editRole', [AdminUserController::class , 'editRole'])
+->name("admin.order.editRole");
 // end admin
 
 Auth::routes();

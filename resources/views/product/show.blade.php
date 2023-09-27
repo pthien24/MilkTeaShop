@@ -2,36 +2,30 @@
 @section('title', $viewData['title'])
 @section('content')
 <section class="contact">
-
-   <div class="row">
-
-      <div class="image">
-            <img src="/storage/{{$viewData['product']->getImage()}}" alt="">
-        </div>
-
-      <form action="" method="post">
-         <input disabled type="text" name="name" value='Name : {{$viewData['product']->getName()}}' class="box">
-         <input disabled type="text" name="name" value='price : {{$viewData['product']->getPrice()}}' class="box">
-         <input disabled type="text" name="name" value='Categories : {{$viewData['product']->getNameCategory()}}' class="box">
-         <input disabled type="text" name="name" value='description : {{$viewData['product']->getName()}}' class="box">
-
-         <input type="button" value="add to card" class="btn" name="send">
-      </form>
-
-   </div>
-</section>
-<section class="about">
     <div class="row">
         <div class="image">
             <img src="/storage/{{$viewData['product']->getImage()}}" alt="">
         </div>
-        <div class="content">
-            <p><span>Name:</span>{{$viewData['product']->getName()}}</p>
-            <p><span>price: </span> {{$viewData['product']->getPrice()}}</p>
-            <p><span>Categories: </span> {{$viewData['product']->getNameCategory()}}</p>
-            <p><span>description</span> {{$viewData['product']->getDescription()}}</p>
-        </div>
-
+        <form method="POST" class="box" action="{{ route('cart.add', ['id'=> $viewData['product']->getId()]) }}">
+            @csrf
+            <input disabled type="text" name="name" value='Name : {{$viewData['product']->getName()}}' class="box">
+            <input disabled type="text" name="name" value='price : {{$viewData['product']->getPrice()}}' class="box">
+            <input disabled type="text" name="name" value='Categories : {{$viewData['product']->getNameCategory()}}' class="box">
+            <input disabled type="text" name="name" value='description : {{$viewData['product']->getName()}}' class="box">
+            <p class="card-text">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="input-group col-auto">
+                            <div class="input-group-text">Quantity</div>
+                            <input type="number" min="1" max="10" class="form-control quantity-input" name="quantity" value="1">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn bg-primary text-white" type="submit">Add to cart</button>
+                    </div>
+                </div>
+            </p>
+        </form>
     </div>
 </section>
 {{-- <div class="single-product mt-150 mb-150">

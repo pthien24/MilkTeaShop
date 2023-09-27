@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.master')
 @section('title', $viewData["title"])
 @section('content')
 <div class="card mb-3">
