@@ -63,7 +63,7 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>john deo</h3>
+            <h3>James</h3>
          </div>
 
          <div class="swiper-slide slide">
@@ -76,7 +76,7 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>john deo</h3>
+            <h3>Mary</h3>
          </div>
 
          <div class="swiper-slide slide">
@@ -89,7 +89,7 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>john deo</h3>
+            <h3>Robert</h3>
          </div>
 
          <div class="swiper-slide slide">
@@ -102,7 +102,7 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>john deo</h3>
+            <h3>Linda</h3>
          </div>
 
          <div class="swiper-slide slide">
@@ -115,7 +115,7 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>john deo</h3>
+            <h3>David</h3>
          </div>
 
          <div class="swiper-slide slide">
@@ -128,7 +128,7 @@
                <i class="fas fa-star"></i>
                <i class="fas fa-star-half-alt"></i>
             </div>
-            <h3>john deo</h3>
+            <h3>Barbara</h3>
          </div>
 
       </div>
